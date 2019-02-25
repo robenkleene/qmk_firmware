@@ -41,7 +41,7 @@ KC_LSFT,   KC_Z,    KC_X,     KC_C,     KC_V,     KC_B,  KC_NO,
 MO(FCTN),  KC_GRV,  KC_LCTL,  KC_LALT,  KC_LGUI,
 
 // Left Cluster
-KC_NO,    KC_NO,
+KC_NO,    MO(FCTN),
 KC_HOME,
 KC_SPC,   KC_ENT,  KC_END,
 
@@ -53,9 +53,9 @@ KC_RCTL,  KC_N,     KC_M,     KC_COMM,  KC_DOT,    KC_SLSH,  KC_RSFT,
 KC_RGUI,  KC_RALT,  KC_LBRC,  KC_RBRC,  MO(FCTN),
 
 // Right Cluster
-KC_NO,    KC_NO,
+MO(FCTN),  KC_NO,
 KC_PGUP,
-KC_PGDN,  KC_ENT,  KC_SPC
+KC_PGDN,   KC_ENT,  KC_SPC
 
     ),
 
