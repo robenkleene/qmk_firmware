@@ -21,7 +21,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *   |  Fn  |   ~  |   \  | LALT | LGUI |                                       | RGUI | RALT |   {  |   }  | Fn   |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        |      |  Fn  |       |  Fn  |      |
+ *                                        | LGUI |  Fn  |       |  Fn  | RGUI |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | Home |       | PgUp |        |      |
  *                                 |Space | RET  |------|       |------|  Ret   |Space |
@@ -41,9 +41,9 @@ KC_LSFT,   KC_Z,    KC_X,     KC_C,     KC_V,     KC_B,  KC_NO,
 MO(FCTN),  KC_GRV,  KC_BSLS,  KC_LALT,  KC_LGUI,
 
 // Left Cluster
-KC_NO,    MO(FCTN),
+KC_LGUI,  MO(FCTN),
 KC_HOME,
-KC_SPC,   KC_ENT,  KC_END,
+KC_SPC,   KC_ENT,    KC_END,
 
 // Right Keyboard
 KC_EQL,   KC_6,     KC_7,     KC_8,     KC_9,      KC_0,     KC_MINS,
@@ -53,9 +53,9 @@ KC_MINS,  KC_N,     KC_M,     KC_COMM,  KC_DOT,    KC_SLSH,  KC_RSFT,
 KC_RGUI,  KC_RALT,  KC_LBRC,  KC_RBRC,  MO(FCTN),
 
 // Right Cluster
-MO(FCTN),  KC_NO,
+MO(FCTN),  KC_RGUI,
 KC_PGUP,
-KC_PGDN,   KC_ENT,  KC_SPC
+KC_PGDN,   KC_ENT,   KC_SPC
 
     ),
 
