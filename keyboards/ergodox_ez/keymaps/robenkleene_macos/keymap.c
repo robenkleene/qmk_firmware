@@ -64,10 +64,10 @@ KC_PGDN,   KC_ENT,   KC_SPC
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * | TNSY   |  F1  |  F2  |  F3  |  F4  |  F5  |      |           |      |  F6  |  F7  |  F8  |  F9  |  F10 |   +    |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |        |      |      |      |      |      |      |           | VolU |  FF  | Mute |      |      |      |   \    |
+ * |        |      |      |      |      |      | BriU |           | VolU |  FF  | Mute |      |      |      |   \    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        |      |      |      |      |      |------|           |------| Play |      |      |      |      |        |
- * |--------+------+------+------+------+------|      |           | VolD |------+------+------+------+------+--------|
+ * |--------+------+------+------+------+------| BriD |           | VolD |------+------+------+------+------+--------|
  * |        |      |      |      |      |      |      |           |      |  RW  | PgUp |      |  UP  |      |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |      |      |      |      |      |                                       | PgDn | LEFT | DOWN |RIGHT |      |
@@ -86,9 +86,9 @@ KC_PGDN,   KC_ENT,   KC_SPC
 
 // Left Keyboard
 RESET,    KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_TRNS,
-KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_BRIU,
 KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
-KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_BRID,
 KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 // Left Cluster
 KC_TRNS,  KC_TRNS,
