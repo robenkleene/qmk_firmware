@@ -68,7 +68,7 @@ KC_PGDN,   KC_ENT,   KC_SPC
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        |      |      |      |      |      |------|           |------| Play |      |      |      |      |        |
  * |--------+------+------+------+------+------| BriD |           | VolD |------+------+------+------+------+--------|
- * |        |      |      |      |      |      |      |           |      |  RW  | PgUp |      |  UP  |      |        |
+ * |        |      |      |      |      |      |      |           |      |  RW  | PgUp | HOME |  UP  | END  |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |      |      |      |      |      |                                       | PgDn | LEFT | DOWN |RIGHT |      |
  *   `----------------------------------'                                       `----------------------------------'
@@ -99,7 +99,7 @@ KC_TRNS,  KC_TRNS,  KC_TRNS,
 KC_TRNS,  KC_F6,    KC_F7,    KC_F8,     KC_F9,    KC_F10,   KC_EQL,
 KC_VOLU,  KC_MNXT,  KC_MUTE,  KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,
 KC_MPLY,  KC_TRNS,  KC_TRNS,  KC_TRNS,   KC_TRNS,  KC_TRNS,
-KC_VOLD,  KC_MPRV,  KC_PGUP,  KC_TRNS,   KC_UP,    KC_TRNS,  KC_TRNS,
+KC_VOLD,  KC_MPRV,  KC_PGUP,  KC_HOME,   KC_UP,    KC_END,   KC_TRNS,
 KC_PGDN,  KC_LEFT,  KC_DOWN,  KC_RIGHT,  KC_TRNS,
 
 // Right Cluster
