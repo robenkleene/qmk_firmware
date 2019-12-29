@@ -10,9 +10,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Default
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * | ESC    |   1  |   2  |   3  |   4  |   5  |      |           |      |   6  |   7  |   8  |   9  |   0  |        |
+ * |  `     |   1  |   2  |   3  |   4  |   5  |      |           |      |   6  |   7  |   8  |   9  |   0  |        |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * | `      |   Q  |   W  |   E  |   R  |   T  |      |           |  =   |   Y  |   U  |   I  |   O  |   P  |  BS    |
+ * | ESC    |   Q  |   W  |   E  |   R  |   T  |      |           |  =   |   Y  |   U  |   I  |   O  |   P  |  BS    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | Tab    |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |   "    |
  * |--------+------+------+------+------+------|      |           |  -   |------+------+------+------+------+--------|
@@ -34,8 +34,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = LAYOUT_ergodox(  // layer 0 : default
 
 // Left Keyboard
-KC_ESC,    KC_1,    KC_2,     KC_3,     KC_4,     KC_5,  KC_NO,
-KC_GRV,    KC_Q,    KC_W,     KC_E,     KC_R,     KC_T,  KC_NO,
+KC_GRV,    KC_1,    KC_2,     KC_3,     KC_4,     KC_5,  KC_NO,
+KC_ESC,    KC_Q,    KC_W,     KC_E,     KC_R,     KC_T,  KC_NO,
 KC_TAB,    KC_A,    KC_S,     KC_D,     KC_F,     KC_G,
 KC_LSFT,   KC_Z,    KC_X,     KC_C,     KC_V,     KC_B,  KC_NO,
 MO(FCTN),  KC_ENT,  KC_LCTL,  KC_LALT,  KC_LGUI,
@@ -62,7 +62,7 @@ KC_PGDN,   KC_ENT,   KC_SPC
 /* Function
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * | TNSY   |  F1  |  F2  |  F3  |  F4  |  F5  |      |           |      |  F6  |  F7  |  F8  |  F9  |  F10 |        |
+ * |        |  F1  |  F2  |  F3  |  F4  |  F5  |      |           |      |  F6  |  F7  |  F8  |  F9  |  F10 |        |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * |   `    |   1  |   2  |   3  |   4  |   5  | BriU |           | VolU |   6  |   7  |   8  |   9  |   0  |        |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
@@ -70,7 +70,7 @@ KC_PGDN,   KC_ENT,   KC_SPC
  * |--------+------+------+------+------+------| BriD |           | VolD |------+------+------+------+------+--------|
  * |        |  F7  |  F8  |  F9  |  F10 | F11  |      |           |      | F12  | PgUp | HOME |  UP  | END  |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |      |      | LCTRL| LALT | LGUI |                                       | PgDn | LEFT | DOWN |RIGHT |      |
+ *   | TNSY |      | LCTRL| LALT | LGUI |                                       | PgDn | LEFT | DOWN |RIGHT |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |      |      |       |  RW  | FF   |
@@ -85,11 +85,11 @@ KC_PGDN,   KC_ENT,   KC_SPC
 [FCTN] = LAYOUT_ergodox(
 
 // Left Keyboard
-RESET,    KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,   KC_TRNS,
+KC_TRNS,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,   KC_TRNS,
 KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,    KC_BRIU,
 KC_TRNS,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,
 KC_TRNS,  KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,  KC_BRID,
-KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+RESET,    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 // Left Cluster
 KC_TRNS,  KC_TRNS,
 KC_TRNS,
