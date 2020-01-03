@@ -6,8 +6,6 @@
 #define BASE 0 // Default
 #define FCTN 1 // Function
 
-#define TAPPING_TOGGLE 1
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Default
  *
