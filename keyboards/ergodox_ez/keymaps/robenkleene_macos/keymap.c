@@ -5,6 +5,7 @@
 
 #define BASE 0 // Default
 #define FCTN 1 // Function
+#define ARRW 2 // Arrows
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Default
@@ -38,7 +39,7 @@ KC_GRV,    KC_1,     KC_2,     KC_3,     KC_4,      KC_5,  KC_NO,
 KC_ESC,    KC_Q,     KC_W,     KC_E,     KC_R,      KC_T,  KC_NO,
 KC_TAB,    KC_A,     KC_S,     KC_D,     KC_F,      KC_G,
 KC_LSFT,   KC_Z,     KC_X,     KC_C,     KC_V,      KC_B,  KC_NO,
-TG(FCTN),  KC_LCTL,  KC_LALT,  KC_LGUI,  MO(FCTN),
+TG(ARRW),  KC_LCTL,  KC_LALT,  KC_LGUI,  MO(FCTN),
 
 // Left Cluster
 KC_LGUI,  MO(FCTN),
@@ -109,6 +110,35 @@ KC_TRNS,
 KC_TRNS,  KC_TRNS,  KC_TRNS
 
 ),
+
+// Arrows
+[ARRW] = LAYOUT_ergodox(
+
+// Left Keyboard
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+// Left Cluster
+KC_TRNS,  KC_TRNS,
+KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,
+
+// Right Keyboard
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,   KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,   KC_UP,    KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_LEFT,  KC_DOWN,  KC_RIGHT,  KC_TRNS,
+
+// Right Cluster
+KC_TRNS,  KC_TRNS,
+KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS
+
+),
+
 
 };
 
