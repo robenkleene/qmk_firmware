@@ -69,9 +69,9 @@ KC_PGDN,   KC_NO,    KC_SPC
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        |  F1  |  F2  |  F3  |  F4  |  F5  |------|           |------|  F6  |  -   |  =   |  [   |  ]   |   \    |
  * |--------+------+------+------+------+------| BriD |           | VolD |------+------+------+------+------+--------|
- * |        |  F7  |  F8  |  F9  |  F10 | F11  |      |           |      | F12  | Play | HOME |  UP  | END  |       |
+ * |        |  F7  |  F8  |  F9  |  F10 | F11  |      |           |      | F12  | Play | HOME |      | END  |       |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *w  | TNSY |      |      |      |      |                                       |      | LEFT | DOWN |RIGHT |      |
+ *w  | TNSY |      |      |      |      |                                       |      |      |      |      |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |      |      |       |  RW  | FF   |
@@ -98,11 +98,11 @@ KC_TRNS,
 KC_TRNS,  KC_TRNS,  KC_TRNS,
 
 // Right Keyboard
-KC_TRNS,  KC_F6,    KC_F7,    KC_F8,     KC_F9,    KC_F10,   KC_TRNS,
-KC_VOLU,  KC_6,     KC_7,     KC_8,      KC_9,     KC_0,     KC_TRNS,
-KC_F6,    KC_MINS,  KC_EQL,   KC_LBRC,   KC_RBRC,  KC_BSLS,
-KC_VOLD,  KC_F12,   KC_MPLY,  KC_HOME,   KC_UP,    KC_END,   KC_TRNS,
-MO(FCTN),  KC_LEFT,  KC_DOWN,  KC_RIGHT,  KC_TRNS,
+KC_TRNS,   KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_TRNS,
+KC_VOLU,   KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_TRNS,
+KC_F6,     KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,  KC_BSLS,
+KC_VOLD,   KC_F12,   KC_MPLY,  KC_HOME,  KC_TRNS,  KC_END,   KC_TRNS,
+MO(FCTN),  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 
 // Right Cluster
 KC_MPRV,  KC_MNXT,
