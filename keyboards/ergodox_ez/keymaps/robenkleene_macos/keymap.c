@@ -179,6 +179,9 @@ void matrix_scan_user(void) {
     case FCTN:
       ergodox_right_led_1_on();
       break;
+    case ARRW:
+      ergodox_right_led_2_on();
+      break;
     default:
       // none
       break;
