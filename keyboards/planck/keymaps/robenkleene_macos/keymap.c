@@ -61,3 +61,18 @@ KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  
 ),
 
 };
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+    switch (get_highest_layer(state)) {
+        case _FCTN:
+            rgblight_setrgb (0x00,  0x00, 0xFF);
+            break;
+        case _ARRW:
+            rgblight_setrgb (0xFF,  0x00, 0x00);
+            break;
+        default:
+            rgblight_setrgb (0x00,  0xFF, 0xFF);
+            break;
+    }
+    return state;
+}

@@ -1,5 +1,10 @@
 #pragma once
 
+#define WS2812_LED_N 2
+#define RGBLED_NUM WS2812_LED_N
+#define RGB_DI_PIN D7
+#define RGB_DISABLE_WHEN_USB_SUSPENDED true // turn off effects when suspended
+
 #ifdef AUDIO_ENABLE
     #define STARTUP_SONG SONG(PLANCK_SOUND)
     // #define STARTUP_SONG SONG(NO_SOUND)
