@@ -62,17 +62,44 @@ KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  
 
 };
 
-layer_state_t layer_state_set_user(layer_state_t state) {
-    switch (get_highest_layer(state)) {
-        case _FCTN:
-            rgblight_setrgb (0x00,  0x00, 0xFF);
-            break;
-        case _ARRW:
-            rgblight_setrgb (0xFF,  0x00, 0x00);
-            break;
-        default:
-            rgblight_setrgb (0x00,  0xFF, 0xFF);
-            break;
+extern bool g_suspend_state;
+extern rgb_config_t rgb_matrix_config;
+
+void keyboard_post_init_user(void) {
+  rgb_matrix_enable();
+}
+
+const uint8_t PROGMEM ledmap[][DRIVER_LED_TOTAL][3] = {
+    [0] = { {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244}, {146,107,244} },
+
+};
+
+void set_layer_color(int layer) {
+  for (int i = 0; i < DRIVER_LED_TOTAL; i++) {
+    HSV hsv = {
+      .h = pgm_read_byte(&ledmap[layer][i][0]),
+      .s = pgm_read_byte(&ledmap[layer][i][1]),
+      .v = pgm_read_byte(&ledmap[layer][i][2]),
+    };
+    if (!hsv.h && !hsv.s && !hsv.v) {
+        rgb_matrix_set_color( i, 0, 0, 0 );
+    } else {
+        RGB rgb = hsv_to_rgb( hsv );
+        float f = (float)rgb_matrix_config.hsv.v / UINT8_MAX;
+        rgb_matrix_set_color( i, f * rgb.r, f * rgb.g, f * rgb.b );
     }
-    return state;
+  }
+}
+
+void rgb_matrix_indicators_user(void) {
+  if (g_suspend_state || keyboard_config.disable_layer_led) { return; }
+  switch (biton32(layer_state)) {
+    case 0:
+      set_layer_color(0);
+      break;
+   default:
+    if (rgb_matrix_get_flags() == LED_FLAG_NONE)
+      rgb_matrix_set_color_all(0, 0, 0);
+    break;
+  }
 }

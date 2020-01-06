@@ -1,18 +1,8 @@
 #pragma once
 
-#define WS2812_LED_N 2
-#define RGBLED_NUM WS2812_LED_N
-#define RGB_DI_PIN D7
-#define RGB_DISABLE_WHEN_USB_SUSPENDED true // turn off effects when suspended
-
 #ifdef AUDIO_ENABLE
-    #define STARTUP_SONG SONG(PLANCK_SOUND)
-    // #define STARTUP_SONG SONG(NO_SOUND)
-
-    #define DEFAULT_LAYER_SONGS { SONG(QWERTY_SOUND), \
-                                  SONG(COLEMAK_SOUND), \
-                                  SONG(DVORAK_SOUND) \
-                                }
+    // #define STARTUP_SONG SONG(PLANCK_SOUND)
+    #define STARTUP_SONG SONG(NO_SOUND)
 #endif
 
 /*
@@ -42,3 +32,9 @@
 // Most tactile encoders have detents every 4 stages
 #define ENCODER_RESOLUTION 4
 
+/*
+  Set any config.h overrides for your specific keymap here.
+  See config.h options at https://docs.qmk.fm/#/config_options?id=the-configh-file
+*/
+#define ORYX_CONFIGURATOR
+#define FIRMWARE_VERSION u8"EWWe6/bgROA"
