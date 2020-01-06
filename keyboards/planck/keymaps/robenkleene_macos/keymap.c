@@ -90,12 +90,20 @@ void set_layer_color(int layer) {
     }
   }
 }
-
 void rgb_matrix_indicators_user(void) {
   if (g_suspend_state || keyboard_config.disable_layer_led) { return; }
   switch (biton32(layer_state)) {
-    case 0:
-      set_layer_color(0);
+    case _BASE:
+      rgb_matrix_set_color_all(0, 157, 246);
+      /* set_layer_color(0); */
+      break;
+    case _FCTN:
+      rgb_matrix_set_color_all(246, 9, 0);
+      /* set_layer_color(1); */
+      break;
+    case _ARRW:
+      rgb_matrix_set_color_all(83,246,0);
+      /* set_layer_color(1); */
       break;
    default:
     if (rgb_matrix_get_flags() == LED_FLAG_NONE)
