@@ -26,7 +26,7 @@ enum planck_layers {
 
 #define FCTN MO(_FCTN)
 #define ARRW TT(_ARRW)
-#define UTIL TT(_UTIL)
+#define UTIL MO(_UTIL)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
