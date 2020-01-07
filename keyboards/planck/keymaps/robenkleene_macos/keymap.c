@@ -70,16 +70,16 @@ void rgb_matrix_indicators_user(void) {
   if (g_suspend_state || keyboard_config.disable_layer_led) { return; }
   switch (biton32(layer_state)) {
     case _BASE:
-      rgb_matrix_set_color_all(34, 50, 37);
+      rgb_matrix_set_color_all(17, 25, 17);
       break;
     case _FCTN:
-      rgb_matrix_set_color_all(34, 50, 37);
+      rgb_matrix_set_color_all(17, 25, 17);
       break;
     case _ARRW:
-      rgb_matrix_set_color_all(50, 0, 0);
+      rgb_matrix_set_color_all(25, 0, 0);
       break;
     case _UTIL:
-      rgb_matrix_set_color_all(0, 50, 0);
+      rgb_matrix_set_color_all(0, 25, 0);
       break;
    default:
     if (rgb_matrix_get_flags() == LED_FLAG_NONE)
