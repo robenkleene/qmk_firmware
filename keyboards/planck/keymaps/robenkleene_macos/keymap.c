@@ -61,7 +61,6 @@ KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  
 };
 
 extern bool g_suspend_state;
-extern rgb_config_t rgb_matrix_config;
 
 void keyboard_post_init_user(void) {
   rgb_matrix_enable();
@@ -71,15 +70,16 @@ void rgb_matrix_indicators_user(void) {
   if (g_suspend_state || keyboard_config.disable_layer_led) { return; }
   switch (biton32(layer_state)) {
     case _BASE:
-      rgb_matrix_set_color_all(150, 215, 255);
+      rgb_matrix_set_color_all(34, 50, 37);
       break;
     case _FCTN:
-      rgb_matrix_set_color_all(150, 215, 255);
-      /* rgb_matrix_set_color_all(255, 0, 0); */
+      rgb_matrix_set_color_all(34, 50, 37);
       break;
     case _ARRW:
-      rgb_matrix_set_color_all(255, 0, 0);
-      /* rgb_matrix_set_color_all(0, 128, 0); */
+      rgb_matrix_set_color_all(50, 0, 0);
+      break;
+    case _UTIL:
+      rgb_matrix_set_color_all(0, 50, 0);
       break;
    default:
     if (rgb_matrix_get_flags() == LED_FLAG_NONE)
