@@ -180,12 +180,11 @@ void matrix_scan_user(void) {
   ergodox_right_led_2_off();
   ergodox_right_led_3_off();
   switch (layer) {
-    // TODO: Make this relevant to the ErgoDox EZ.
-    case FCTN:
-      ergodox_right_led_1_on();
+    case UTIL:
+      ergodox_right_led_2_on();
       break;
     case ARRW:
-      ergodox_right_led_2_on();
+      ergodox_right_led_1_on();
       break;
     default:
       // none
