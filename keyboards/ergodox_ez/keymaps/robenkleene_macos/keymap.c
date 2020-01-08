@@ -116,11 +116,11 @@ KC_TRNS,  KC_TRNS,  KC_TRNS
 [ARRW] = LAYOUT_ergodox(
 
 // Left Keyboard
-KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,  KC_NO,  KC_NO,
-KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,  KC_NO,  KC_NO,
-KC_LEFT,  KC_DOWN,  KC_UP,    KC_RIGHT,  KC_NO,  KC_NO,
-KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,  KC_NO,  KC_NO,
-KC_TRNS,  KC_LCTL,  KC_LALT,  KC_LGUI,   KC_NO,
+KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,  KC_NO,  KC_NO,
+KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,  KC_NO,  KC_NO,
+KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,  KC_NO,
+KC_LSFT,  KC_NO,    KC_NO,    KC_NO,    KC_NO,  KC_NO,  KC_NO,
+KC_TRNS,  KC_LCTL,  KC_LALT,  KC_LGUI,  KC_NO,
 
 // Left Cluster
 KC_NO,  KC_NO,
@@ -131,7 +131,7 @@ KC_NO,  KC_NO,  KC_NO,
 KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,     KC_NO,  KC_NO,
 KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,     KC_NO,  KC_NO,
 KC_LEFT,  KC_DOWN,  KC_UP,    KC_RIGHT,  KC_NO,     KC_NO,
-KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,     KC_UP,  KC_NO,
+KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,     KC_UP,  KC_RSFT,
 KC_NO,    KC_RGUI,  KC_LEFT,  KC_DOWN,   KC_RIGHT,
 
 // Right Cluster
