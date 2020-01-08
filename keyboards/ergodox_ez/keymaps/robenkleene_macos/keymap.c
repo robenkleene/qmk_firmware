@@ -131,8 +131,8 @@ KC_TRNS,  KC_NO,  KC_NO,
 KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,     KC_NO,  KC_NO,
 KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,     KC_NO,  KC_NO,
 KC_LEFT,  KC_DOWN,  KC_UP,    KC_RIGHT,  KC_NO,     KC_NO,
-KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_UP,     KC_NO,  KC_TRNS,
-KC_TRNS,  KC_LEFT,  KC_DOWN,  KC_RIGHT,  KC_NO,
+KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,     KC_UP,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_LEFT,  KC_DOWN,   KC_RIGHT,
 
 // Right Cluster
 KC_NO,  KC_NO,
