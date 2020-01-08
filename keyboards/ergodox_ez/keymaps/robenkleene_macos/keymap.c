@@ -120,7 +120,7 @@ KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,  KC_NO,  KC_NO,
 KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,  KC_NO,  KC_NO,
 KC_LEFT,  KC_DOWN,  KC_UP,    KC_RIGHT,  KC_NO,  KC_NO,
 KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,  KC_NO,  KC_NO,
-KC_NO,    KC_LCTL,  KC_LALT,  KC_LGUI,   KC_NO,
+KC_TRNS,  KC_LCTL,  KC_LALT,  KC_LGUI,   KC_NO,
 
 // Left Cluster
 KC_NO,  KC_NO,
@@ -128,11 +128,11 @@ KC_NO,
 KC_NO,  KC_NO,  KC_NO,
 
 // Right Keyboard
-KC_NO,  KC_NO,    KC_NO,    KC_NO,     KC_NO,     KC_NO,  KC_NO,
-KC_NO,  KC_NO,    KC_NO,    KC_NO,     KC_NO,     KC_NO,  KC_NO,
-KC_NO,  KC_NO,    KC_NO,    KC_RIGHT,  KC_NO,     KC_NO,
-KC_NO,  KC_NO,    KC_NO,    KC_NO,     KC_NO,     KC_UP,  KC_NO,
-KC_NO,  KC_RGUI,  KC_LEFT,  KC_DOWN,   KC_RIGHT,
+KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,     KC_NO,  KC_NO,
+KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,     KC_NO,  KC_NO,
+KC_LEFT,  KC_DOWN,  KC_UP,    KC_RIGHT,  KC_NO,     KC_NO,
+KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,     KC_UP,  KC_NO,
+KC_NO,    KC_RGUI,  KC_LEFT,  KC_DOWN,   KC_RIGHT,
 
 // Right Cluster
 KC_NO,  KC_NO,
