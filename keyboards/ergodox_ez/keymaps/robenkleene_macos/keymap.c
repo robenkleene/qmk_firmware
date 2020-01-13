@@ -5,8 +5,7 @@
 
 #define BASE 0 // Default
 #define FCTN 1 // Function
-#define ARRW 2 // Arrows
-#define UTIL 3 // Arrows
+#define UTIL 2 // Util
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Default
@@ -36,11 +35,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = LAYOUT_ergodox(  // layer 0 : default
 
 // Left Keyboard
-KC_GRV,    KC_1,     KC_2,     KC_3,     KC_4,      KC_5,  KC_NO,
-KC_TAB,    KC_Q,     KC_W,     KC_E,     KC_R,      KC_T,  KC_NO,
-KC_ESC,    KC_A,     KC_S,     KC_D,     KC_F,      KC_G,
-KC_LSFT,   KC_Z,     KC_X,     KC_C,     KC_V,      KC_B,  KC_NO,
-TT(ARRW),  KC_LCTL,  KC_LALT,  KC_LGUI,  MO(FCTN),
+KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,      KC_5,  KC_NO,
+KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,      KC_T,  KC_NO,
+KC_ESC,   KC_A,     KC_S,     KC_D,     KC_F,      KC_G,
+KC_LSFT,  KC_Z,     KC_X,     KC_C,     KC_V,      KC_B,  KC_NO,
+KC_ENT,   KC_LCTL,  KC_LALT,  KC_LGUI,  TT(FCTN),
 
 // Left Cluster
 KC_LGUI,  MO(FCTN),
@@ -52,7 +51,7 @@ KC_NO,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_NO,
 KC_EQL,    KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSPC,
 KC_H,      KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,
 KC_MINS,   KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_RSFT,
-MO(FCTN),  KC_RGUI,  KC_RALT,  KC_LCTL,  KC_ENT,
+TT(FCTN),  KC_RGUI,  KC_RALT,  KC_LCTL,  KC_ENT,
 
 // Right Cluster
 MO(FCTN),  KC_RGUI,
@@ -87,11 +86,11 @@ KC_PGDN,   KC_ENT,   KC_SPC
 [FCTN] = LAYOUT_ergodox(
 
 // Left Keyboard
-KC_TRNS,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,   RESET,
-KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,    KC_BRIU,
-KC_TRNS,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,
-KC_TRNS,  KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,  KC_BRID,
-KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  MO(UTIL),
+KC_TRNS,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,   RESET,
+KC_GRV,    KC_1,     KC_2,     KC_3,     KC_4,     KC_5,    KC_BRIU,
+KC_TRNS,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,
+KC_TRNS,   KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,  KC_BRID,
+MO(UTIL),  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 
 // Left Cluster
 KC_TRNS,  KC_TRNS,
@@ -99,45 +98,16 @@ KC_TRNS,
 KC_TRNS,  KC_TRNS,  KC_TRNS,
 
 // Right Keyboard
-KC_TRNS,   KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_TRNS,
-KC_VOLU,   KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_TRNS,
-KC_F6,     KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,  KC_BSLS,
-KC_VOLD,   KC_F12,   KC_MPLY,  KC_VOLD,  KC_VOLU,  KC_TRNS,  KC_TRNS,
-MO(UTIL),  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_F6,    KC_F7,    KC_F8,    KC_F9,     KC_F10,   KC_TRNS,
+KC_VOLU,  KC_6,     KC_7,     KC_8,     KC_9,      KC_0,     KC_TRNS,
+KC_F6,    KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,   KC_BSLS,
+KC_VOLD,  KC_F12,   KC_MPLY,  KC_VOLD,  KC_VOLU,   KC_UP,    KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_LEFT,  KC_DOWN,  KC_RIGHT,
 
 // Right Cluster
 KC_MPRV,  KC_MNXT,
 KC_TRNS,
 KC_TRNS,  KC_TRNS,  KC_TRNS
-
-),
-
-// Arrows
-[ARRW] = LAYOUT_ergodox(
-
-// Left Keyboard
-KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,  KC_NO,
-KC_TRNS,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,  KC_NO,
-KC_TRNS,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
-KC_TRNS,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,  KC_NO,
-KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
-
-// Left Cluster
-KC_NO,    KC_NO,
-KC_NO,
-KC_TRNS,  KC_NO,  KC_NO,
-
-// Right Keyboard
-KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,     KC_NO,  KC_NO,
-KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,     KC_NO,  KC_NO,
-KC_LEFT,  KC_DOWN,  KC_UP,    KC_RIGHT,  KC_NO,     KC_NO,
-KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,     KC_UP,  KC_TRNS,
-KC_TRNS,  KC_TRNS,  KC_LEFT,  KC_DOWN,   KC_RIGHT,
-
-// Right Cluster
-KC_NO,  KC_NO,
-KC_NO,
-KC_NO,  KC_NO,  KC_TRNS
 
 ),
 
@@ -183,7 +153,7 @@ void matrix_scan_user(void) {
     case UTIL:
       ergodox_right_led_2_on();
       break;
-    case ARRW:
+    case FCTN:
       ergodox_right_led_1_on();
       break;
     default:
