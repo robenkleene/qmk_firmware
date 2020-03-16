@@ -5,7 +5,8 @@
 
 #define BASE 0 // Default
 #define FCTN 1 // Function
-#define UTIL 2 // Util
+#define FCT2 2 // Function 2
+#define UTIL 3 // Util
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Default
@@ -90,7 +91,7 @@ KC_TRNS,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,   KC_TRNS,
 KC_GRV,    KC_1,     KC_2,     KC_3,     KC_4,     KC_5,    KC_BRIU,
 MO(UTIL),  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,
 KC_TRNS,   KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,  KC_BRID,
-KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,  MO(FCT2),
 
 // Left Cluster
 KC_TRNS,  KC_TRNS,
@@ -102,7 +103,7 @@ KC_TRNS,  KC_F6,    KC_F7,    KC_F8,    KC_F9,     KC_F10,   KC_TRNS,
 KC_VOLU,  KC_6,     KC_7,     KC_8,     KC_9,      KC_0,     KC_TRNS,
 KC_F6,    KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,   KC_BSLS,
 KC_VOLD,  KC_F12,   KC_MPLY,  KC_VOLD,  KC_VOLU,   KC_UP,    KC_TRNS,
-KC_TRNS,  KC_TRNS,  KC_LEFT,  KC_DOWN,  KC_RIGHT,
+MO(FCT2), KC_TRNS,  KC_LEFT,  KC_DOWN,  KC_RIGHT,
 
 // Right Cluster
 KC_MPRV,  KC_MNXT,
@@ -110,6 +111,36 @@ KC_TRNS,
 KC_TRNS,  KC_TRNS,  KC_TRNS
 
 ),
+
+// Function 2
+[FCT2] = LAYOUT_ergodox(
+
+// Left Keyboard
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+
+// Left Cluster
+KC_TRNS,  KC_TRNS,
+KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,
+
+// Right Keyboard
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,   KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,   KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,   KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_PGUP,   KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_HOME,  KC_PGDN,  KC_END,
+
+// Right Cluster
+KC_TRNS,  KC_TRNS,
+KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS
+
+),
+
 
 // Util
 [UTIL] = LAYOUT_ergodox(
@@ -152,10 +183,13 @@ void matrix_scan_user(void) {
   ergodox_right_led_3_off();
   switch (layer) {
     case UTIL:
-      ergodox_right_led_2_on();
+      ergodox_right_led_1_on();
       break;
     case FCTN:
-      ergodox_right_led_1_on();
+      ergodox_right_led_3_on();
+      break;
+    case FCT2:
+      ergodox_right_led_2_on();
       break;
     default:
       // none
