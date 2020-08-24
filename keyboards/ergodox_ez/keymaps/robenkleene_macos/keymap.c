@@ -7,6 +7,7 @@
 #define FCTN 1 // Function
 #define FCT2 2 // Function 2
 #define UTIL 3 // Util
+#define NUMB 4 // Util
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Default
@@ -40,7 +41,7 @@ KC_GRV,    KC_1,     KC_2,     KC_3,     KC_4,      KC_5,  KC_NO,
 KC_TAB,    KC_Q,     KC_W,     KC_E,     KC_R,      KC_T,  KC_NO,
 KC_ESC,    KC_A,     KC_S,     KC_D,     KC_F,      KC_G,
 KC_LSFT,   KC_Z,     KC_X,     KC_C,     KC_V,      KC_B,  KC_NO,
-TG(FCTN),  KC_LCTL,  KC_LALT,  KC_LGUI,  MO(FCTN),
+TG(NUMB),  KC_LCTL,  KC_LALT,  KC_LGUI,  MO(FCTN),
 
 // Left Cluster
 KC_LGUI,  MO(FCTN),
@@ -171,6 +172,35 @@ KC_TRNS,  KC_TRNS,  KC_TRNS
 
 ),
 
+// Function 2
+[NUMB] = LAYOUT_ergodox(
+
+// Left Keyboard
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+
+// Left Cluster
+KC_TRNS,  KC_TRNS,
+KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,
+
+// Right Keyboard
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,   KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_6,     KC_7,     KC_8,     KC_9,      KC_0,     KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,   KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,   KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+
+// Right Cluster
+KC_TRNS,  KC_TRNS,
+KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS
+
+),
+
 };
 
 void matrix_scan_user(void) {
@@ -183,9 +213,12 @@ void matrix_scan_user(void) {
   ergodox_right_led_3_off();
   switch (layer) {
     case UTIL:
-      ergodox_right_led_1_on();
+      ergodox_led_all_on();
       break;
     case FCTN:
+      ergodox_right_led_3_on();
+      break;
+    case NUMB:
       ergodox_right_led_3_on();
       break;
     case FCT2:
