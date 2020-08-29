@@ -21,20 +21,22 @@ enum planck_layers {
   _BASE,
   _FCTN,
   _FCT2,
+  _NUMB,
   _UTIL
 };
 
 #define FCTN MO(_FCTN)
 #define FCT2 MO(_FCT2)
+#define NUMB MO(_NUMB)
 #define UTIL MO(_UTIL)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_BASE] = LAYOUT_planck_grid(
-KC_TAB,     KC_Q,     KC_W,     KC_E,     KC_R,  KC_T,    KC_Y,    KC_U,  KC_I,     KC_O,     KC_P,     KC_BSPC,
-KC_ESC,     KC_A,     KC_S,     KC_D,     KC_F,  KC_G,    KC_H,    KC_J,  KC_K,     KC_L,     KC_SCLN,  KC_QUOT,
-KC_LSFT,    KC_Z,     KC_X,     KC_C,     KC_V,  KC_B,    KC_N,    KC_M,  KC_COMM,  KC_DOT,   KC_SLSH,  KC_RSFT,
-TG(_FCTN),  KC_LCTL,  KC_LALT,  KC_LGUI,  FCTN,  KC_SPC,  KC_SPC,  FCTN,  KC_RGUI,  KC_RALT,  KC_RCTL,  KC_ENT
+KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,  KC_T,    KC_Y,    KC_U,  KC_I,     KC_O,     KC_P,     KC_BSPC,
+KC_ESC,   KC_A,     KC_S,     KC_D,     KC_F,  KC_G,    KC_H,    KC_J,  KC_K,     KC_L,     KC_SCLN,  KC_QUOT,
+KC_LSFT,  KC_Z,     KC_X,     KC_C,     KC_V,  KC_B,    KC_N,    KC_M,  KC_COMM,  KC_DOT,   KC_SLSH,  KC_RSFT,
+NUMB,     KC_LCTL,  KC_LALT,  KC_LGUI,  FCTN,  KC_SPC,  KC_SPC,  FCTN,  KC_RGUI,  KC_RALT,  KC_RCTL,  KC_ENT
 ),
 
 [_FCTN] = LAYOUT_planck_grid(
@@ -49,6 +51,13 @@ KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  
 KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_MPRV,  KC_MNXT,  KC_PGUP,  KC_TRNS,
 KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_HOME,  KC_PGDN,  KC_END
+),
+
+[_NUMB] = LAYOUT_planck_grid(
+KC_TRNS,  KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS
 ),
 
 [_UTIL] = LAYOUT_planck_grid(
@@ -73,13 +82,16 @@ void rgb_matrix_indicators_user(void) {
       rgb_matrix_set_color_all(17, 25, 17);
       break;
     case _FCTN:
-      rgb_matrix_set_color_all(25, 0, 0);
-      break;
-    case _FCT2:
       rgb_matrix_set_color_all(0, 0, 25);
       break;
-    case _UTIL:
+    case _FCT2:
+      rgb_matrix_set_color_all(17, 17, 25);
+      break;
+    case _NUMB:
       rgb_matrix_set_color_all(0, 25, 0);
+      break;
+    case _UTIL:
+      rgb_matrix_set_color_all(25, 0, 0);
       break;
    default:
     if (rgb_matrix_get_flags() == LED_FLAG_NONE)
