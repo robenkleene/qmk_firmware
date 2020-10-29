@@ -88,11 +88,11 @@ KC_PGDN,   KC_ENT,   KC_SPC
 [FCTN] = LAYOUT_ergodox(
 
 // Left Keyboard
-KC_TRNS,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,   KC_TRNS,
-KC_GRV,    KC_1,     KC_2,     KC_3,     KC_4,     KC_5,    KC_BRIU,
-MO(UTIL),  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,
-KC_TRNS,   KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,  KC_BRID,
-KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,  MO(FCT2),
+KC_TRNS,   KC_F1,    KC_F2,    KC_F3,    KC_F4,     KC_F5,   KC_TRNS,
+KC_GRV,    KC_1,     KC_2,     KC_3,     KC_4,      KC_5,    KC_BRIU,
+MO(UTIL),  KC_F1,    KC_F2,    KC_F3,    KC_F4,     KC_F5,
+KC_TRNS,   KC_F7,    KC_F8,    KC_F9,    KC_F10,    KC_F11,  KC_BRID,
+MO(FCT2),  KC_TRNS,  KC_TRNS,  KC_TRNS,  TG(FCTN),
 
 // Left Cluster
 KC_TRNS,  KC_TRNS,
@@ -100,11 +100,11 @@ KC_TRNS,
 KC_TRNS,  KC_TRNS,  KC_TRNS,
 
 // Right Keyboard
-KC_TRNS,  KC_F6,    KC_F7,    KC_F8,    KC_F9,     KC_F10,   KC_TRNS,
-KC_VOLU,  KC_6,     KC_7,     KC_8,     KC_9,      KC_0,     KC_TRNS,
-KC_F6,    KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,   KC_BSLS,
-KC_VOLD,  KC_F12,   KC_MPLY,  KC_VOLD,  KC_VOLU,   KC_UP,    KC_TRNS,
-MO(FCT2), KC_TRNS,  KC_LEFT,  KC_DOWN,  KC_RIGHT,
+KC_TRNS,   KC_F6,    KC_F7,    KC_F8,    KC_F9,     KC_F10,   KC_TRNS,
+KC_VOLU,   KC_6,     KC_7,     KC_8,     KC_9,      KC_0,     KC_TRNS,
+KC_F6,     KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,   KC_BSLS,
+KC_VOLD,   KC_F12,   KC_MPLY,  KC_VOLD,  KC_VOLU,   KC_UP,    KC_TRNS,
+TG(FCTN),  KC_TRNS,  KC_LEFT,  KC_DOWN,  KC_RIGHT,
 
 // Right Cluster
 KC_MPRV,  KC_MNXT,
