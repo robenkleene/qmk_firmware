@@ -82,7 +82,7 @@ void rgb_matrix_indicators_user(void) {
       rgb_matrix_set_color_all(17, 25, 17);
       break;
     case _FCTN:
-      rgb_matrix_set_color_all(17, 17, 25);
+      rgb_matrix_set_color_all(25, 0, 25);
       break;
     case _FCT2:
       rgb_matrix_set_color_all(0, 0, 25);
