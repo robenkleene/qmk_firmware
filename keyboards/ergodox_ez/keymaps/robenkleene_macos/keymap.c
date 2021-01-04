@@ -104,7 +104,7 @@ KC_TRNS,   KC_F6,     KC_F7,    KC_F8,    KC_F9,     KC_F10,   KC_TRNS,
 KC_VOLU,   KC_6,      KC_7,     KC_8,     KC_9,      KC_0,     KC_TRNS,
 KC_F6,     KC_MINS,   KC_EQL,   KC_LBRC,  KC_RBRC,   KC_BSLS,
 KC_VOLD,   KC_F12,    KC_MPLY,  KC_VOLD,  KC_VOLU,   KC_UP,    KC_TRNS,
-MO(FCT2),  TG(NUMB),  KC_LEFT,  KC_DOWN,  KC_RIGHT,
+MO(FCT2),  TO(NUMB),  KC_LEFT,  KC_DOWN,  KC_RIGHT,
 
 // Right Cluster
 KC_MPRV,  KC_MNXT,
@@ -219,7 +219,7 @@ void matrix_scan_user(void) {
       ergodox_right_led_3_on();
       break;
     case NUMB:
-      ergodox_right_led_3_on();
+      ergodox_right_led_1_on();
       break;
     case FCT2:
       ergodox_right_led_2_on();
